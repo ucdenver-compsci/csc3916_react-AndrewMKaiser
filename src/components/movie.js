@@ -5,6 +5,7 @@ import { fetchMovie } from "../actions/movieActions";
 import MovieDetail from "../components/moviedetail"
 
 // support routing
+//this is a comment
 
 function Movie(props) {
     const [selectedMovie] = useState(props.selectedMovie);
