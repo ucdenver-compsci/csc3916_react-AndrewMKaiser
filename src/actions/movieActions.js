@@ -75,7 +75,7 @@ export function saveReview(movieId, reviewData) {
     return dispatch => {
         const apiUrl = `${env.REACT_APP_API_URL}/${movieId}/reviews`;
         const token = localStorage.getItem('token');
-        const username = localStorage.getItem('username');
+        const name = localStorage.getItem('username');
         const { review, rating } = reviewData;
 
         const headers = {
@@ -85,10 +85,10 @@ export function saveReview(movieId, reviewData) {
         };
 
         const body = JSON.stringify({
-            movieId,
-            username,
-            review,
-            rating
+            movieId: movieId, 
+            username: name,
+            review: reviewData.review,
+            rating: reviewData.rating
         });
 
         fetch(apiUrl, {

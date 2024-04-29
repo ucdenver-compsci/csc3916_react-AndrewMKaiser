@@ -21,7 +21,8 @@ function ReviewForm({ movieId }) {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setReviewData(prevData => ({
+       
+        (prevData => ({
             ...prevData,
             [name]: value
         }));

@@ -49,7 +49,11 @@ class MovieDetail extends Component {
         }
 
         return (
-            <DetailInfo />
+            <div>
+                  <ReviewForm movieId={this.props.movieId} />
+                  <DetailInfo />
+            </div>
+          
         )
     }
 }

@@ -19,10 +19,10 @@ class MovieHeader extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                            <LinkContainer to="/movielist">
+                            <LinkContainer to="/movies">
                                 <Nav.Link disabled={!this.props.loggedIn}>Movie List</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to={'/movie/' + (this.props.selectedMovie ? this.props.selectedMovie._id : '')}>
+                            <LinkContainer to={'/movies/' + (this.props.selectedMovie ? this.props.selectedMovie._id : '')}>
                                 <Nav.Link disabled={!this.props.loggedIn}>Movie Detail</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/signin">
